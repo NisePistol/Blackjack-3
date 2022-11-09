@@ -1,0 +1,77 @@
+﻿<Window x:Class="Blackjack_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Blackjack_2"
+        mc:Ignorable="d"
+        Title="Blackjack" MinHeight="550" MinWidth="350" MaxHeight="650" MaxWidth="500" SizeToContent="WidthAndHeight" Background="#EEE">  
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Name="gridInlogg">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0">Logga in/skapa konto</Label>
+            <TextBox Grid.Row="0" Grid.Column="1" Height="50" Name="rutaInloggNamn"></TextBox>
+            <Button Grid.Row="1" Grid.ColumnSpan="2" Height="30" Margin="75 10 75 0" Click="KlickLoggaIn">Logga in</Button>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Name="gridMain" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" FontSize="30">Blackjack</Label>
+
+            <Label Grid.Row="1" Grid.Column="0">Pengar:</Label>
+            <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="75 0 0 0" Name="rutaPengar" IsReadOnly="True" FontSize="15">$0</TextBox>
+
+            <Label Grid.Row="2" Grid.Column="0">Satsning:</Label>
+            <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="75 0 0 0" Name="rutaSatsning" FontSize="15"></TextBox>
+            
+            <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="30" Margin="50 20 50 20" Click="KlickSatsa">Satsa</Button>
+
+            <Button Grid.Row="4" Grid.Column="0" Height="30" Margin="20 0 10 0" Click="KlickTaKort">Ta kort</Button>
+            <Button Grid.Row="4" Grid.Column="1" Height="30" Margin="10 0 20 0" Click="KlickStå">Stå</Button>
+        
+            <Label Grid.Row="5" Grid.Column="0">Du har:</Label>
+            <TextBox Grid.Row="6" Grid.Column="0" Name="spelareKort" IsReadOnly="True"></TextBox>
+
+            <Label Grid.Row="5" Grid.Column="1">Datorn har:</Label>
+            <TextBox Grid.Row="6" Grid.Column="1" Name="datorKort" IsReadOnly="True"></TextBox>
+
+            <Button Grid.Row="7" Grid.ColumnSpan="2" Height="30" Margin="50 20 50 20" Click="KlickBörjaOm">Börja om</Button>
+            
+            <TextBox Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Name="spelare"></TextBox>
+            <TextBox Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Name="dator"></TextBox>
+        </Grid>
+    </Grid>
+</Window>

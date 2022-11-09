@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Blackjack-3/1.0.0": {
+        "runtime": {
+          "Blackjack-3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Blackjack-3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
